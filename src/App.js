@@ -1,9 +1,18 @@
 import React from "react"
+import Home from "./Pages/Home"
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
+import Products from "./Pages/Products"
 
-export function App(){
+export function App() {
     return (
-        <div>
-            <h1>Welcome welcome welcome</h1>
-        </div>
+        <Router>
+            <div>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/product" element={<Products />} />
+                </Routes>
+            </div>
+        </Router>
+
     )
 }
